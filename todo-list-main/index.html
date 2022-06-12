@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>To Do List</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Lista de Tarefas</h1>
+
+      <form class="form-todo-add">
+        <input type="text" class="input-add-task" placeholder="Inisira aqui sua nova tarefa..." required="required" autofocus maxlength="100">
+        <button class="btn-add-task"> 
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </form>
+    </header>
+
+    <main>
+      <h3 class="title-tasks">Suas Tarefas</h3>
+      <ul class="task-list">
+      </ul>
+    </main>
+
+    <footer>
+      <!-- <span class="pending-tasks">Não há tarefas a serem realizadas.</span> -->
+      <button class="clear-all-tasks">Limpar Tarefas</button>
+    </footer>
+  </div>
+  <div class="modal-edit">
+    <button class="close-modal-btn">
+      <i class="fa fa-remove fa-2x"></i>
+    </button>
+    <h3>Edição</h3>
+    <p id="id-task-edit" style="display: none;">#</p>
+    <hr>
+    <form>
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="input-edit">
+      </div>
+      <div class="form-row">
+        <button class="update-task">Salvar</button>
+      </div>
+    </form>
+  </div>
+  <div class="window-modal-edit"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
