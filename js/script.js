@@ -12,6 +12,7 @@ const inputEdit = document.querySelector('#input-edit');
 const idTaskEdit = document.querySelector('#id-task-edit');
 const clearAllTasks = document.querySelector('.clear-all-tasks');
 const titleTasks = document.querySelector('.title-tasks');
+const completeTask = document.getElementsByClassName('todo-complete');
 
 
 let dbTasks = [];
@@ -91,7 +92,6 @@ function editTask (id) {
 }
 
 
-
 function deleteTask (id) {
 
 
@@ -110,6 +110,15 @@ function deleteTask (id) {
       location.reload();
     }
   }
+
+taskList.addEventListener('click', (event) => {
+  const item = event.target;
+  const task = item.parentElement;
+
+  if (item.classList[0] == 'todo-complete') {
+    task.classList.toggle('completed');
+  }
+})
 
 clearAllTasks.addEventListener('click', () => {
   let confirm = window.confirm('Tem certeza que deseja excluir todas as tarefas?')
