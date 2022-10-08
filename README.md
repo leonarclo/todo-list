@@ -48,7 +48,7 @@ As seguintes ferramentas foram utilizadas no desenvolvimento do projeto:
 - [x] Criar;
 - [x] Editar;
 - [x] Atualizar;
-- [x] Excluir uma ou todas as músicas.
+- [x] Excluir uma ou todas as tarefas.
 
 --- 
 
